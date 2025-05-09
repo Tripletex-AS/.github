@@ -1,0 +1,100 @@
+name: Task
+description: Create a specific task to be completed
+title: "[TASK]: "
+assignees: []
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for creating a task! Please provide the details below.
+
+  - type: input
+    id: parent
+    attributes:
+      label: Parent Epic/Issue
+      description: Is this task part of a larger epic or issue? Link it here.
+      placeholder: e.g., #123
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: A clear description of what needs to be done
+      placeholder: This task involves...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What conditions must be met for this task to be considered complete?
+      placeholder: |
+        - [ ] Implement feature X
+        - [ ] Unit tests for Y
+        - [ ] Documentation updated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Task Type
+      description: What type of work is this?
+      options:
+        - Development
+        - Design
+        - Documentation
+        - Testing
+        - DevOps
+        - Research
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: What is the priority of this task?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size Estimate
+      description: How big is this task?
+      options:
+        - XS (few hours)
+        - S (1 day)
+        - M (2-3 days)
+        - L (3-5 days)
+        - XL (5+ days)
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: Any implementation details or approaches to consider
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Does this task depend on other work being completed first?
+      placeholder: e.g., Depends on #456 being completed
+    validations:
+      required: false

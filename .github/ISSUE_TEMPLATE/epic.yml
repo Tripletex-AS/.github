@@ -1,0 +1,85 @@
+name: Epic
+description: Create a new epic to organize related work
+title: "[EPIC]: "
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Epic Description
+        An epic represents a large body of work that can be broken down into multiple smaller tasks.
+
+  - type: input
+    id: goal
+    attributes:
+      label: Epic Goal
+      description: What is the overall goal of this epic?
+      placeholder: e.g., Improve user onboarding experience
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Provide a comprehensive description of the epic and its scope
+      placeholder: This epic involves...
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: What metrics or outcomes will determine if this epic is successful?
+      placeholder: |
+        - Increase conversion rate by X%
+        - Reduce support tickets by Y%
+        - Complete implementation of Z feature
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-work
+    attributes:
+      label: Related Work
+      description: List any related issues, epics, or external dependencies
+      placeholder: |
+        - #123 - Related feature
+        - Depends on completing the API redesign
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: What is the priority of this epic?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      description: What is the estimated effort for this epic?
+      options:
+        - Small (1-2 weeks)
+        - Medium (3-4 weeks)
+        - Large (1-2 months)
+        - X-Large (3+ months)
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Notes
+      description: Any technical notes or considerations for implementation
+    validations:
+      required: false

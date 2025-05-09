@@ -1,0 +1,91 @@
+name: Improvement
+description: Suggest an improvement to an existing feature
+title: "[IMPROVEMENT]: "
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement to our project!
+
+  - type: input
+    id: feature
+    attributes:
+      label: Existing Feature
+      description: Which existing feature would you like to improve?
+      placeholder: e.g., Search functionality, User profile, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: Describe how the feature currently works
+      placeholder: Currently, the feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: improved-behavior
+    attributes:
+      label: Desired Improvement
+      description: Describe how you would like the feature to work
+      placeholder: I would like the feature to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: What benefits would this improvement bring?
+      placeholder: |
+        - Improved user experience
+        - Faster performance
+        - Better accessibility
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: User Impact
+      description: How many users would benefit from this improvement?
+      options:
+        - All users
+        - Most users
+        - Some users
+        - Few users
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Implementation Complexity
+      description: How complex do you think this improvement would be to implement?
+      options:
+        - Simple (minor changes)
+        - Moderate (significant changes)
+        - Complex (major refactoring)
+        - Unknown
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Approaches
+      description: Are there alternative ways to achieve the same goal?
+      placeholder: Other approaches could be...
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other context or screenshots about the improvement
+    validations:
+      required: false
