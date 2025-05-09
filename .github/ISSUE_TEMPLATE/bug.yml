@@ -7,6 +7,19 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+  
+  - type: dropdown
+    id: type
+    attributes:
+      label: Project
+      description: Which project does this feature request relate to?
+      options:
+        - Bond
+        - Project B
+        - Project C
+        - Other
+    validations:
+      required: true
 
   - type: dropdown
     id: environment
