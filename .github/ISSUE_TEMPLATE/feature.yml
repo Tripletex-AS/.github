@@ -27,16 +27,6 @@ body:
     validations:
       required: true
 
-  name: Feature Request
-description: Suggest an idea for this project
-title: "[FEATURE]: "
-assignees: []
-body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to suggest a new feature!
-
   - type: textarea
     id: problem
     attributes:
